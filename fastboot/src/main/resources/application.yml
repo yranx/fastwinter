@@ -1,0 +1,25 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: fastboot
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://47.112.226.243:3306/ctl-content?zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    username: root
+    password: cheshenghuo888
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath:/mapper/**/**.xml
+  type-aliases-package: com.ctl.content.service.model
+main:
+  allow-bean-definition-overriding: true
+
+
+logging:
+  file:
+    path: D://data
+
+
