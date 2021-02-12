@@ -7,6 +7,7 @@ fastbasic|swagger、mapstruct |pom,基础用
   |  | CarValidUtil| 车牌、VIN码校验
   |  | CheckValue| 校验参数的工具类
   |  | IdCardUtil| 身份证校验
+  |  | JasyptUtil| Jasypt加密配置文件
   |  | PageUtil| 校验参数的工具类
   |  | SysTimeUtil| 获取当前时间 
   |  | UUIDUtil| UUID |  | | 

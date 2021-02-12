@@ -1,0 +1,53 @@
+使用Jasypt配置文件内容加密
+1.引入jar包
+<dependency>
+	<groupId>com.github.ulisesbocchio</groupId>
+	<artifactId>jasypt-spring-boot-starter</artifactId>
+	<version>2.0.0</version>
+</dependency> <!--jasypt对配置文件加密-->
+
+2.yml配置文件中引入配置文件加密key
+jasypt:
+  encryptor:
+    password: root
+
+3.加密Abc123!@# 得到密文
+
+（
+public class JasyptUtils {
+    /**
+     * Jasypt生成加密结果
+     *
+     * @param password 配置文件中设定的加密密码 jasypt.encryptor.password
+     * @param value    待加密值
+     * @return
+     */
+    public static String encryptPwd(String password, String value) {
+        PooledPBEStringEncryptor encryptOr = new PooledPBEStringEncryptor();
+        encryptOr.setConfig(cryptOr(password));
+        String result = encryptOr.encrypt(value);
+        return result;
+    }
+
+    public static SimpleStringPBEConfig cryptOr(String password) {
+        SimpleStringPBEConfig config = new SimpleStringPBEConfig();
+        config.setPassword(password);
+        config.setAlgorithm(StandardPBEByteEncryptor.DEFAULT_ALGORITHM);
+        config.setKeyObtentionIterations("1000");
+        config.setPoolSize("1");
+        config.setProviderName("SunJCE");
+        config.setSaltGeneratorClassName("org.jasypt.salt.RandomSaltGenerator");
+        config.setStringOutputType("base64");
+        return config;
+    }
+
+    public static void main(String[] args) {
+        // 加密结果
+        System.out.println(encryptPwd("root", "Abc123!@#"));
+    }
+
+}
+）
+得 eTbQB+zu6AWKdEaonwMVvm9jsSgMiKd+
+填入
+ password: ENC(eTbQB+zu6AWKdEaonwMVvm9jsSgMiKd+)
