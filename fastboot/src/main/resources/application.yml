@@ -6,14 +6,14 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://47.112.226.243:3306/ctl-content?zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/ranzh?zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
     username: root
-    password: cheshenghuo888
+    password: root
     type: com.alibaba.druid.pool.DruidDataSource
 
 mybatis:
   mapper-locations: classpath:/mapper/**/**.xml
-  type-aliases-package: com.ctl.content.service.model
+  type-aliases-package: com.ranx.model
 main:
   allow-bean-definition-overriding: true
 

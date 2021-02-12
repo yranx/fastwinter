@@ -17,7 +17,7 @@ public class Result {
         this.data = data;
     }
 
-    public Result(Integer code, com.ranx.utils.result.ResultEnums enums) {
+    public Result(Integer code, ResultEnums enums) {
         this.code = code;
         this.data = enums.getInfo();
     }
