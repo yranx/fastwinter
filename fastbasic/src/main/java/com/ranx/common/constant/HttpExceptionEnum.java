@@ -1,4 +1,4 @@
-package com.ranx.common.result;
+package com.ranx.common.constant;
 
 /**
  * @author ranx
@@ -21,13 +21,13 @@ public enum HttpExceptionEnum {
     NO_HANDLER_FOUND_EXCEPTION("没有找到资源异常"),
     ASYNC_REQUEST_TIMEOUT_EXCEPTION("异步请求超时异常");
 
-    private String info;
+    public String message;
 
-    public String getInfo() {
-        return info;
+    public String getMessage() {
+        return message;
     }
 
-    HttpExceptionEnum(String info) {
-        this.info = info;
+    HttpExceptionEnum(String message) {
+        this.message = message;
     }
 }
