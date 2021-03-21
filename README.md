@@ -13,7 +13,8 @@ fastbasic|swagger、mapstruct |pom,基础用
   |  | SysTimeUtil| 获取当前时间 
   |  | TimeUtil| 时间转换工具 
   |  | UUIDUtil| UUID |  | | 
- fastboot |generatorCode、mybatis | boot用
+ fastboot |generatorCode、mybatis | boot用 
+ fastdoc |文档 |  
 
 
 
