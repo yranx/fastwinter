@@ -1,0 +1,38 @@
+{
+	"users": [{
+		"name": "Dell",
+		"id": 1
+	}, {
+		"name": "Dell",
+		"id": 1
+	}, {
+		"name": "Dell",
+		"id": 1
+	}]
+}
+
+
+
+{
+	"userId" :[{1,13,20}]
+
+}
+
+{
+    "id": 6,
+    "isSatisfied": 0,
+    "list": [
+        {
+            "appraise": 1,
+            "grade": 1
+        },
+        {
+            "appraise": 2,
+            "grade": 2
+        },
+        {
+            "appraise": 3,
+            "grade": 3
+        }
+    ]
+}

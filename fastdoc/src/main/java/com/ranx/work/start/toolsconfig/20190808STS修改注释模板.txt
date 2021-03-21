@@ -1,0 +1,38 @@
+eclipse/myeclipse注释模板的修改
+
+Window --> Java --> Code Style --> Code Templates --> Comments --> types 【类型(Types)注释标签（类的注释)】 --> Edit 
+
+/**
+ * @Description: ${todo}
+ * @author ${user}
+ * ${date}${time}
+ */
+ 
+ /**   
+*    
+* 项目名称：${project_name}   
+* 类名称：${type_name}   
+* 类描述：   
+* 创建人：${user}   
+* 创建时间：${date} ${time}   
+* 修改人：${user}   
+* 修改时间：${date} ${time}   
+* 修改备注：   
+* @version    
+
+
+/**  
+
+* @Title: ${file_name} 
+
+* @Package ${package_name} 
+
+* @Description: ${todo}(用一句话描述该文件做什么) 
+
+* @author A18ccms A18ccms_gmail_com  
+
+* @date ${date} ${time} 
+
+* @version V1.0  
+
+*/ 

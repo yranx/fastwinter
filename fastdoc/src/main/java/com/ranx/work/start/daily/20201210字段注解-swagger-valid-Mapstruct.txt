@@ -1,0 +1,25 @@
+
+字段注解
+
+================================================================================================================================
+ @ApiModelProperty(value = "日期")
+ 
+ 
+@NotNull(message = "日期不能为空")
+@DateTimeFormat(pattern = "yyyy-MM-dd")
+
+============com.fasterxml.jackson.annotation.JsonFormat; ==== springboot默认使用
+@JsonFormat(pattern = "yyyy-MM-dd HH:mm",timezone = "GMT+8")
+
+
+============import com.alibaba.fastjson.annotation.JSONField;== 不建议用，用于网络请求
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JSONField(format = "yyyy-MM-dd"
+    
+    
+    
+@Max(value = 100)
+private Integer age;
+================================================================================================================================
+ Mapstruct忽略  
+ @Mapping(target = "reason", ignore = true)

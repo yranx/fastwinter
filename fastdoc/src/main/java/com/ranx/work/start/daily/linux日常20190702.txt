@@ -1,0 +1,107 @@
+﻿
+查找目录：find /（查找范围） -name '查找关键字' -type d
+查找文件：find /（查找范围） -name 查找关键字 -print
+find . 列出当前目录及子目录下所有文件和文件夹
+
+
+
+
+view / vim
+查内容：shit+:  ->  /查询内容+回车  -> 点击[n]定位
+文件头：shit+:  -> 1(数字一)
+文件尾：shit+:  -> $
+退出： 保存 wq 或者 x
+	   不保存 q!
+查看向下行： Enter
+查看向下一屏： Ctrl + F
+查看向上一屏：Ctrl + B
+查看进程XX：ps -ef | grep XX
+
+查找文件： 找所有：find .
+				   find -name '查找关键字' 
+		   找文件中的字符：grep 字符串
+查看文件： 动态监控日志尾部：tail -f 文件名
+		   默认显示最后10行：tail 文件名
+		   默认显示最后20行：tail -n 20
+			                tail -300f XXX.log
+				tail -fn 300 xxx.log
+
+vim进入文本：光标位置前：a
+			 光标当前位置：i
+			 光标下面一行： o
+
+查找文本中的值： grep -n 'XX查的值'  xxx.txt
+
+
+
+新建目录：	mkdir vcple
+加权限： chmod -R 777 vcple
+
+查看时间 date -R
+
+
+
+
+
+
+1.查看当前包里面的批量
+java -jar /batch/batch*.jar
+
+
+2.-- 在特定日志文件（appService）查询特定数据（appServiceExecutor-1）输出到某个文本(LOG.TXT)中查看
+-- 主要是 > 输出信息
+grep appServiceExecutor-1 appService > LOG.TXT
+view LOG.TXT 
+
+3.输出信息
+echo ${DBNAME}
+echo ${DBUSER}
+echo ${DBPASS}
+
+4.java -uvf  jar包名  要替换的原材料
+
+5.改名备份
+mv detail.sh  detail_20191122bak.sh  改名字
+cp -R /app/env/crontabfile /app/env/crontabfile20191202  备份
+crontab -l >  /app/env/crontabfile20191202
+
+6.  telnet 10.240.37.14 7015
+
+7.
+加密
+方法一： echo LGVJYCjkAo | base64
+方法二： base64 回车
+              pwd 回车
+              CTRL+ D
+
+cd app/env
+vi pro.properties
+解密
+echo awsfsjfksdfhsjajkAo= | base64 -d
+
+8.日志解压查询
+gzip -d xxx.tar.gz
+tar xvf xxx.tar
+
+grep '202007080040080' gateway.log.10.231.82.* --color
+
+grep '批量执行失败' * >batch1.txt
+
+解压到指定目录
+unzip test.zip -d /app/zs139
+
+9.查目录下最大文件
+du -s * | sort -nr | head
+
+10.查看内存和硬盘大小
+free -h 查看内存
+date -R 查看系统时间
+ps aux|grep ctl-account
+
+内存
+free -m
+free -g
+cat /proc/meminfo
+
+硬盘
+df -lh

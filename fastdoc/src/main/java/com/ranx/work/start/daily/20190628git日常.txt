@@ -1,0 +1,51 @@
+﻿<<<<<<< HEAD
+
+
+1.撤销commit：git reset --soft HEAD^
+	--mixed 不删除工作空间改动代码，撤销commit，并且撤销git add . 操作
+	--soft  不删除工作空间改动代码，撤销commit，不撤销git add . 
+	--hard	删除工作空间改动代码，撤销commit，撤销git add . 
+
+
+2.回退操作revert
+	获取提交的ssh code, git revert :
+		git revert 41f1cc2a44790edc7f6510b8f437bf409d7c0504
+		git push
+
+3.
+=====主分支master
+=====dev分支develop
+=====个人开发feat-zhr-test
+
+4.
+查看分支		git branch -a
+删除远程分支	git push origin --delete dev-test
+删除本地分支	git branch -d dev-test
+远程版本覆盖本地版本	git reset --hard HEAD
+						git pull
+查看分支对应远程情况 git branch -vv
+
+5.
+切换分支		git checkout master
+拉取主分支修改	git checkout master
+				git pull origin master
+				git checkout dev-test
+				git merge master
+
+将远程git仓库里的指定分支拉取到本地（本地不存在的分支）
+ git fetch origin test-pre
+ git checkout -b 本地分支名 origin/远程分支名     ： git checkout -b test-pre remotes/origin/test-pre
+
+6.查看stash的时间
+git stash list --date=relative
+git stash list --date=short
+git stash list --date=local
+ 
+7.git stash 
+git stash list 
+git stash pop stash@{0}
+ 
+
+8.git status   查看修改
+git add . 或者 git add XX
+git commit -m "修改XXbug(document#663)"

@@ -1,0 +1,14 @@
+jdk
+maven
+idea
+ue
+google
+postman
+wecaht
+redismannager
+motionPro
+pd
+navicat
+SecureCRT6
+WinSCP
+hosts配置

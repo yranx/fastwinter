@@ -1,0 +1,17 @@
+Ctrl+alt+s : 快捷Settings
+Ctrl+shift+U : 全部大写或小写
+Ctrl + Alt + O： 去除无用引入
+
+ctrl+F ：找当前文件内容
+ctrl+shift+F  或double shift（按两下）或ctrl+shift+N  ：查找全局文件
+ctrl+R ：替换当前文件内容 
+Ctrl+F12 ：查看所有方法
+CTRL+ALT+T : 快速召唤try
+CTRL+ALT+B ：查看方法具体实现
+CTRL+B : 查看方法被调用
+
+ctrl+alt+v 提出变量
+ctrl+alt+M 提出代码块为方法
+
+
+Alt + F8	配置services窗口	Views -> Tool Windows -> Services

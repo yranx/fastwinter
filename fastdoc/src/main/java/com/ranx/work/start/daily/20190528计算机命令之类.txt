@@ -1,0 +1,35 @@
+﻿
+1.计算器
+calc
+
+
+2.查看windows系统激活
+运行--> slmgr.vbs -xpr
+激活的详细信息 ：slmgr.vbs -dlv
+
+3.查看某文件能生成的MD5码
+certutil -hashfile F:\data\mulHeadersOutput.txt MD5
+
+4.查看所有端口和PID:  netstat -ano
+找到对应的端口对应的PID  输入指令找到对应的进程 :  tasklist | findstr "7676"
+杀掉该进程:taskkill /f /t /im java.exe 
+
+1.Tracert（跟踪路由）
+是路由跟踪实用程序，用于确定 IP数据包访问目标所采取的路径。
+Tracert 命令使用用 IP 生存时间 (TTL) 字段和 ICMP 错误消息来确定从一个主机到网络上其他主机的路由.
+其命令格式如 : tracert [-d] [-h maximum_hops] [-j computer-list] [-w timeout] target_name
+>tracert www.yhd.com
+
+-d 指定不将地址解析为计算机名.
+-h maximum_hops 指定搜索目标的最大跃点数.
+-j host-list 与主机列表一起的松散源路由（仅适用于IPv4），指定沿host-list的稀疏源路由列表序进行转发。host-list是以空格隔开的多个路由器IP地址，最多9个。
+-w timeout 等待每个回复的超时时间(以毫秒为单位).
+-R 跟踪往返行程路径(仅适用于 IPv6).
+-S srcaddr 要使用的源地址(仅适用于 IPv6).
+-4 强制使用 IPv4.
+-6 强制使用 IPv6.
+target_name 目标计算机的名称.
+
+tracert 命令跟踪 TCP/IP 数据包从该计算机到其他远程计算机所采用的路径。
+tracert 命令使用 ICMP 响应请求并答复消息（和 ping 命令类似），产生关于经过的每个路由器及每个跃点的往返时间 (RTT) 的命令行报告输出。
+如果 tracert 失败，可以使用命令输出来帮助确定哪个中介路由器转发失败或耗时太多。

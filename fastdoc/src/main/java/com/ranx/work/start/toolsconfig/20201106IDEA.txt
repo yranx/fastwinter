@@ -1,0 +1,33 @@
+
+1.手动设置护眼绿的RGB颜色
+(https://blog.csdn.net/qq_35128300/article/details/90266222)
+路径：File->Settings->Editor->Color Scheme->General ->Text->Default text
+C7EDCC
+
+2.idea配置代码注释模板
+（https://www.cnblogs.com/yanh0606/p/11990863.html）
+File-->settings-->Editor-->File and Code Templates-->Files-->class
+/**
+ * TODO
+ * @version 1.0
+ * @author ${USER}
+ * @date ${DATE} ${TIME}
+ */
+ 
+3.intellij idea 中去除 @Autowired 注入对象带来的红色下划线报错提示
+ https://blog.csdn.net/jiangyu1013/article/details/85758036
+ 
+
+4.Lifecycle
+MAVEN下Plugins下install可能有时候没法生成本地的包
+lifecycle是maven中一个十分完善的生命周期模型，所以使用Lifecycle中的install项目就会自动去maven仓库下载需要的包
+
+5.配置导出
+https://blog.csdn.net/daming1/article/details/105504433/
+
+6.关闭idea的自动更新？
+（https://www.cnblogs.com/mingyue5826/p/10898837.html）
+File—Setting—Appearance&Beha—System Setting—Updates
+取消勾选Automatically check updates 复选框，最后确定
+
+7.lombok下载
