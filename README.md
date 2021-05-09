@@ -1,7 +1,7 @@
 ### 项目说明
 project | information | remark
 -------|-------| -----|
-fastwinter|快速基础搭建学习用|maven管理框，不用打包
+fastwinter|快速开始新项目，基础搭建学习用|maven管理框，不用打包
 fastbasic|swagger、mapstruct |pom,基础用
  |  |utils| 工具类
   |  | Base64Util| 加密解密
@@ -16,7 +16,7 @@ fastbasic|swagger、mapstruct |pom,基础用
  fastboot |generatorCode、mybatis | boot用 
  fastdoc |文档 |  
    |  | day| 日常网络杂记
-   |  | notes| 日常笔记
+   |  | notes| 日常笔记--移到xdoc
    |  | project| 项目杂记
    |  | work| 快速开始工具，快捷键啊，日历、工作表
 
