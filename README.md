@@ -15,6 +15,10 @@ fastbasic|swagger、mapstruct |pom,基础用
   |  | UUIDUtil| UUID |  | | 
  fastboot |generatorCode、mybatis | boot用 
  fastdoc |文档 |  
+   |  | day| 日常网络杂记
+   |  | notes| 日常笔记
+   |  | project| 项目杂记
+   |  | work| 快速开始工具，快捷键啊，日历、工作表
 
 
 

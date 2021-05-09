@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages="com.ranx")
 @MapperScan("com.ranx.mapper.*")
-public class FastbootApplication {
+public class FastdocApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FastbootApplication.class, args);
+		SpringApplication.run(FastdocApplication.class, args);
 	}
 
 }
