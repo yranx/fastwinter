@@ -16,7 +16,7 @@ fastcommon|swagger |共性工具类
   |  | UUIDUtil| UUID |  | | 
  fastboot |generatorCode、mybatis |  基础快速用框架：springboot常用的工具搭建（复制demo,必须加一层package，如com.ranx.xxx）
   |  | generatorCode| 自动生成代码maven插件 |  | | 
- fastcompany | | 新公司知识点积累用（复制demo,必须加一层package，如com.ranx.xxx）
+ fastcompany | | 公司知识点积累用（复制demo,必须加一层package，如com.ranx.xxx）
   |  | authinterception| 登录权限 |  | | 
  fastdoc |文档 |
    |  | day| 日常网络杂记
