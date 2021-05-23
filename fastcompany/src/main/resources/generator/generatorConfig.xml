@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+
+    <context id="mySql"  targetRuntime="MyBatis3"   defaultModelType="flat" >
+        <!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；
+          一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖
+       -->
+        <property name="autoDelimitKeywords" value="false"/>
+        <!-- 生成的Java文件的编码-->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 格式化java代码-->
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+        <!-- 格式化XML代码-->
+        <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+        <!-- 针对mysql数据库 -->
+        <property name="useInformationSchema" value="true"/>
+
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+
+
+        <commentGenerator>
+            <!-- 是否取消注释 -->
+            <property name="suppressAllComments" value="false"/>
+            <!-- 是否生成注释代时间戳-->
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/ranzh" userId="root"
+                        password="root"/>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 生成模型的包名和位置 -->
+        <javaModelGenerator targetPackage="com.ranx.model"
+                            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+          <!--  <property name="rootClass" value="com.ctl.content.service.model.BaseDo" />-->
+        </javaModelGenerator>
+
+        <!-- 生成映射文件的包名和位置 -->
+        <sqlMapGenerator targetPackage="mapper/base"
+                         targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 配置mapper对应的java映射 -->
+        <javaClientGenerator
+                targetPackage="com.ranx.mapper.base"
+                targetProject="./src/main/java"
+                type="XMLMAPPER"
+        />
+
+
+        <table tableName="operate_log" mapperName="OperateLogMapper"
+               domainObjectName="OperateLogDo" enableDeleteByExample="false" >
+            <generatedKey column="id" sqlStatement="mysql" identity="true"/>
+        </table>
+
+
+    </context>
+</generatorConfiguration>

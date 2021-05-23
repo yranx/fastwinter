@@ -1,15 +1,21 @@
 server:
-  port: 8071
+  port: 8072
 spring:
   application:
     name: fastboot
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/ranzh?zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/base?serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
     username: root
-    password: root
+    password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 127.0.0.1
+    database: 0
+    port: 6379
+    timeout: 300s
+    password: 123456
 
 mybatis:
   mapper-locations: classpath:/mapper/**/**.xml
@@ -22,4 +28,7 @@ logging:
   file:
     path: D://data
 
-
+fast:
+  token:
+    appId: 1697074064L
+    secretKey: e497c28af5765510805cb25446f13c6fb3498a

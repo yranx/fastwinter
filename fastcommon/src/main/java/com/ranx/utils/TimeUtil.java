@@ -1,7 +1,5 @@
 package com.ranx.utils;
 
-import org.apache.commons.lang3.time.DateUtils;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -14,22 +12,9 @@ import java.util.Date;
 public class TimeUtil {
     public static void main(String[] args) {
 
-
         dateTimeFoematter();
     }
 
-    public static void dayRemindTime() {
-        Date zeroTime = DateUtils.truncate(new Date(), Calendar.DATE);
-        Calendar c = Calendar.getInstance();
-        c.setTime(zeroTime);
-        c.add(Calendar.DAY_OF_MONTH, 1);
-        Date endTime = c.getTime();
-        Date date = new Date();
-        long maxTime = (endTime.getTime() - date.getTime()) / 1000;
-        if (0 == maxTime) {
-            maxTime = 24 * 60 * 60;
-        }
-    }
 
     public static void dateTimeFoematter() {
 

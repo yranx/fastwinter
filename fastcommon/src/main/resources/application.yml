@@ -1,0 +1,13 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: fastcommon
+  profiles:
+    active: dev
+
+logging:
+  file:
+    path: D://data
+
+

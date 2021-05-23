@@ -10,6 +10,4 @@ logging:
   file:
     path: D://data
 
-jasypt:
-  encryptor:
-    password: ENC(eTbQB+zu6AWKdEaonwMVvm9jsSgMiKd+)
+

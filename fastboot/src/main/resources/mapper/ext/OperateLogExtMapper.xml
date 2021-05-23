@@ -1,5 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ranx.mapper.base.OperateLogMapper">
+<mapper namespace="com.ranx.mapper.ext.OperateLogExtMapper">
+    <!--批量插入-->
+    <insert id="insertBatch" parameterType="list">
+        <foreach collection="list" index="index" item="item" open="" separator=";" close="">
+            insert into operate_log
+            <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="item.memberId != null">
+                    member_id,
+                </if>
+                <if test="item.type != null">
+                    type,
+                </if>
+                <if test="item.logContent != null">
+                    log_content,
+                </if>
+                <if test="item.createdId != null">
+                    created_id,
+                </if>
+                <if test="item.createdName != null">
+                    created_name,
+                </if>
+                <if test="item.createdTime != null">
+                    created_time,
+                </if>
+                <if test="item.updateId != null">
+                    update_id,
+                </if>
+                <if test="item.updateName != null">
+                    update_name,
+                </if>
+                <if test="item.updateTime != null">
+                    update_time,
+                </if>
+                <if test="item.valid != null">
+                    valid,
+                </if>
+            </trim>
+            <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="item.memberId != null">
+                    #{item.memberId,jdbcType=BIGINT},
+                </if>
+                <if test="item.type != null">
+                    #{item.type,jdbcType=INTEGER},
+                </if>
+                <if test="item.logContent != null">
+                    #{item.logContent,jdbcType=VARCHAR},
+                </if>
+                <if test="item.createdId != null">
+                    #{item.createdId,jdbcType=BIGINT},
+                </if>
+                <if test="item.createdName != null">
+                    #{item.createdName,jdbcType=VARCHAR},
+                </if>
+                <if test="item.createdTime != null">
+                    #{item.createdTime,jdbcType=TIMESTAMP},
+                </if>
+                <if test="item.updateId != null">
+                    #{item.lastModifiedId,jdbcType=BIGINT},
+                </if>
+                <if test="item.updateName != null">
+                    #{item.updateName,jdbcType=VARCHAR},
+                </if>
+                <if test="item.updateTime != null">
+                    #{item.updateTime,jdbcType=TIMESTAMP},
+                </if>
+                <if test="item.valid != null">
+                    #item.{valid,jdbcType=INTEGER},
+                </if>
+            </trim>
+        </foreach>
+    </insert>
 
+    <!--批量更新-->
+    <update id="batchUpdate" parameterType="java.util.List">
+        UPDATE operate_log
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="log_content =case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.logContent!=null">
+                        when id=#{i.id} then #{i.logContent}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="update_time =case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.updateTime!=null">
+                        when id=#{i.id} then #{i.updateTime}
+                    </if>
+                </foreach>
+            </trim>
+        </trim>
+        WHERE
+        <foreach collection="list" separator="or" item="i" index="index" >
+            id=#{i.id}
+        </foreach>
+    </update>
 </mapper>

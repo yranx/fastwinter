@@ -14,8 +14,10 @@
 
   <modules>
     <module>fastbasic</module>
+    <module>fastcommon</module>
     <module>fastboot</module>
     <module>fastdoc</module>
+    <module>fastcompany</module>
   </modules>
 
   <properties>
